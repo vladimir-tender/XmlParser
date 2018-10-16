@@ -1,0 +1,379 @@
+{% extends "@App/layout.html.twig" %}
+
+{% block body %}
+
+<div class="container">
+
+    <h3>Rates</h3>
+
+    <select id="countrySelect">
+        <option value="">Select Country</option>
+        <option data-iso2="AF" data-code="93" data-country-id="89" name="Afghanistan" data-iso3="AFG">Afghanistan</option>
+        <option data-iso2="AL" data-code="355" data-country-id="3" name="Albania" data-iso3="ALB">Albania</option>
+        <option data-iso2="DZ" data-code="213" data-country-id="4" name="Algeria" data-iso3="DZA">Algeria</option>
+        <option data-iso2="AS" data-code="1" data-country-id="5" name="American Samoa" data-iso3="ASM">American Samoa
+        </option>
+        <option data-iso2="AD" data-code="376" data-country-id="6" name="Andorra" data-iso3="AND">Andorra</option>
+        <option data-iso2="AO" data-code="244" data-country-id="7" name="Angola" data-iso3="AGO">Angola</option>
+        <option data-iso2="AI" data-code="1" data-country-id="8" name="Anguilla" data-iso3="AIA">Anguilla</option>
+        <option data-iso2="AQ" data-code="672" data-country-id="9" name="Antarctica" data-iso3="ATA">Antarctica</option>
+        <option data-iso2="AG" data-code="1" data-country-id="10" name="Antigua and Barbuda" data-iso3="ATG">Antigua and
+            Barbuda
+        </option>
+        <option data-iso2="AR" data-code="54" data-country-id="11" name="Argentina" data-iso3="ARG">Argentina</option>
+        <option data-iso2="AM" data-code="374" data-country-id="12" name="Armenia" data-iso3="ARM">Armenia</option>
+        <option data-iso2="AW" data-code="297" data-country-id="13" name="Aruba" data-iso3="ABW">Aruba</option>
+        <option data-iso2="AU" data-code="61" data-country-id="15" name="Australia" data-iso3="AUS">Australia</option>
+        <option data-iso2="AT" data-code="43" data-country-id="16" name="Austria" data-iso3="AUT">Austria</option>
+        <option data-iso2="AZ" data-code="994" data-country-id="17" name="Azerbaijan" data-iso3="AZE">Azerbaijan</option>
+        <option data-iso2="BS" data-code="1" data-country-id="18" name="Bahamas" data-iso3="BHS">Bahamas</option>
+        <option data-iso2="BH" data-code="973" data-country-id="19" name="Bahrain" data-iso3="BHR">Bahrain</option>
+        <option data-iso2="BD" data-code="880" data-country-id="20" name="Bangladesh" data-iso3="BGD"> Bangladesh</option>
+        <option data-iso2="BB" data-code="1" data-country-id="21" name="Barbados" data-iso3="BRB">Barbados</option>
+        <option data-iso2="BY" data-code="375" data-country-id="22" name="Belarus" data-iso3="BLR">Belarus</option>
+        <option data-iso2="BE" data-code="32" data-country-id="23" name="Belgium" data-iso3="BEL">Belgium</option>
+        <option data-iso2="BZ" data-code="501" data-country-id="24" name="Belize" data-iso3="BLZ">Belize</option>
+        <option data-iso2="BJ" data-code="229" data-country-id="25" name="Benin" data-iso3="BEN">Benin</option>
+        <option data-iso2="BM" data-code="1" data-country-id="26" name="Bermuda" data-iso3="BMU">Bermuda</option>
+        <option data-iso2="BT" data-code="975" data-country-id="27" name="Bhutan" data-iso3="BTN">Bhutan</option>
+        <option data-iso2="BO" data-code="591" data-country-id="28" name="Bolivia" data-iso3="BOL">Bolivia</option>
+        <option data-iso2="BQ" data-code="599" data-country-id="291"
+                name="Bonaire, Saint Eustatius and Saba (Caribbean Netherlands)"
+                data-iso3="BES">Bonaire, Saint Eustatius and Saba (Caribbean Netherlands)
+        </option>
+        <option data-iso2="BA" data-code="387" data-country-id="29" name="Bosnia and Herzegovina" data-iso3="BIH">Bosnia and
+            Herzegovina
+        </option>
+        <option data-iso2="BW" data-code="267" data-country-id="30" name="Botswana" data-iso3="BWA">Botswana</option>
+        <option data-iso2="BR" data-code="55" data-country-id="31" name="Brazil" data-iso3="BRA">Brazil</option>
+        <option data-iso2="BN" data-code="673" data-country-id="33" name="Brunei Darussalam" data-iso3="BRN">Brunei
+            Darussalam
+        </option>
+        <option data-iso2="BG" data-code="359" data-country-id="34" name="Bulgaria" data-iso3="BGR">Bulgaria</option>
+        <option data-iso2="BF" data-code="226" data-country-id="35" name="Burkina Faso" data-iso3="BFA">Burkina Faso
+        </option>
+        <option data-iso2="BI" data-code="257" data-country-id="36" name="Burundi" data-iso3="BDI">Burundi</option>
+        <option data-iso2="KH" data-code="855" data-country-id="37" name="Cambodia" data-iso3="KHM">Cambodia</option>
+        <option data-iso2="CM" data-code="237" data-country-id="38" name="Cameroon" data-iso3="CMR">Cameroon</option>
+        <option data-iso2="CA" data-code="1" data-country-id="39" name="Canada" data-iso3="CAN">Canada</option>
+        <option data-iso2="CV" data-code="238" data-country-id="40" name="Cape Verde" data-iso3="CPV">Cape Verde</option>
+        <option data-iso2="KY" data-code="1" data-country-id="41" name="Cayman Islands" data-iso3="CYM">Cayman Islands
+        </option>
+        <option data-iso2="CF" data-code="236" data-country-id="42" name="Central African Republic" data-iso3="CAF">Central
+            African
+            Republic
+        </option>
+        <option data-iso2="TD" data-code="235" data-country-id="43" name="Chad" data-iso3="TCD">Chad</option>
+        <option data-iso2="CL" data-code="56" data-country-id="45" name="Chile" data-iso3="CHL">Chile</option>
+        <option data-iso2="CN" data-code="86" data-country-id="46" name="China" data-iso3="CHN">China</option>
+        <option data-iso2="CO" data-code="57" data-country-id="49" name="Colombia" data-iso3="COL">Colombia</option>
+        <option data-iso2="KM" data-code="269" data-country-id="50" name="Comoros" data-iso3="COM">Comoros</option>
+        <option data-iso2="CG" data-code="242" data-country-id="51" name="Congo" data-iso3="COG">Congo</option>
+        <option data-iso2="CD" data-code="243" data-country-id="14" name="Congo, Democratic Republic" data-iso3="COD">Congo,
+            Democratic Republic
+        </option>
+        <option data-iso2="CK" data-code="682" data-country-id="52" name="Cook Islands" data-iso3="COK">Cook Islands
+        </option>
+        <option data-iso2="CR" data-code="506" data-country-id="53" name="Costa Rica" data-iso3="CRI">Costa Rica</option>
+        <option data-iso2="HR" data-code="385" data-country-id="54" name="Croatia" data-iso3="HRV">Croatia</option>
+        <option data-iso2="CU" data-code="53" data-country-id="55" name="Cuba" data-iso3="CUB">Cuba</option>
+        <option data-iso2="CW" data-code="599" data-country-id="273" name="Curacao" data-iso3="CUW">Curacao</option>
+        <option data-iso2="CY" data-code="357" data-country-id="56" name="Cyprus" data-iso3="CYP">Cyprus</option>
+        <option data-iso2="CZ" data-code="420" data-country-id="57" name="Czech Republic" data-iso3="CZE">Czech Republic
+        </option>
+        <option data-iso2="DK" data-code="45" data-country-id="58" name="Denmark" data-iso3="DNK">Denmark</option>
+        <option data-iso2="DJ" data-code="253" data-country-id="60" name="Djibouti" data-iso3="DJI">Djibouti</option>
+        <option data-iso2="DM" data-code="1" data-country-id="61" name="Dominica" data-iso3="DMA">Dominica</option>
+        <option data-iso2="DO" data-code="1" data-country-id="62" name="Dominican Republic" data-iso3="DOM">Dominican
+            Republic
+        </option>
+        <option data-iso2="EC" data-code="593" data-country-id="64" name="Ecuador" data-iso3="ECU">Ecuador</option>
+        <option data-iso2="EG" data-code="20" data-country-id="65" name="Egypt" data-iso3="EGY">Egypt</option>
+        <option data-iso2="SV" data-code="503" data-country-id="66" name="El Salvador" data-iso3="SLV">El Salvador</option>
+        <option data-iso2="GQ" data-code="240" data-country-id="67" name="Equatorial Guinea" data-iso3="GNQ">Equatorial
+            Guinea
+        </option>
+        <option data-iso2="ER" data-code="291" data-country-id="68" name="Eritrea" data-iso3="ERI">Eritrea</option>
+        <option data-iso2="EE" data-code="372" data-country-id="69" name="Estonia" data-iso3="EST">Estonia</option>
+        <option data-iso2="ET" data-code="251" data-country-id="70" name="Ethiopia" data-iso3="ETH">Ethiopia</option>
+        <option data-iso2="FK" data-code="500" data-country-id="71" name="Falkland Islands (Malvinas)" data-iso3="FLK">
+            Falkland
+            Islands (Malvinas)
+        </option>
+        <option data-iso2="FO" data-code="298" data-country-id="72" name="Faroe Islands" data-iso3="FRO">Faroe Islands
+        </option>
+        <option data-iso2="FJ" data-code="679" data-country-id="73" name="Fiji" data-iso3="FJI">Fiji</option>
+        <option data-iso2="FI" data-code="358" data-country-id="74" name="Finland" data-iso3="FIN">Finland</option>
+        <option data-iso2="FR" data-code="33" data-country-id="75" name="France" data-iso3="FRA">France</option>
+        <option data-iso2="GF" data-code="594" data-country-id="77" name="French Guiana" data-iso3="GUF">French Guiana
+        </option>
+        <option data-iso2="PF" data-code="689" data-country-id="78" name="French Polynesia" data-iso3="PYF">French
+            Polynesia
+        </option>
+        <option data-iso2="GA" data-code="241" data-country-id="80" name="Gabon" data-iso3="GAB">Gabon</option>
+        <option data-iso2="GM" data-code="220" data-country-id="81" name="Gambia" data-iso3="GMB">Gambia</option>
+        <option data-iso2="GE" data-code="995" data-country-id="82" name="Georgia" data-iso3="GEO">Georgia</option>
+        <option data-iso2="DE" data-code="49" data-country-id="83" name="Germany" data-iso3="DEU">Germany</option>
+        <option data-iso2="GH" data-code="233" data-country-id="84" name="Ghana" data-iso3="GHA">Ghana</option>
+        <option data-iso2="GI" data-code="350" data-country-id="85" name="Gibraltar" data-iso3="GIB">Gibraltar</option>
+        <option data-iso2="GR" data-code="30" data-country-id="86" name="Greece" data-iso3="GRC">Greece</option>
+        <option data-iso2="GL" data-code="299" data-country-id="87" name="Greenland" data-iso3="GRL">Greenland</option>
+        <option data-iso2="GD" data-code="1" data-country-id="88" name="Grenada" data-iso3="GRD">Grenada</option>
+        <option data-iso2="GP" data-code="590" data-country-id="90" name="Guadeloupe" data-iso3="GLP">Guadeloupe</option>
+        <option data-iso2="GU" data-code="1" data-country-id="91" name="Guam" data-iso3="GUM">Guam</option>
+        <option data-iso2="GT" data-code="502" data-country-id="93" name="Guatemala" data-iso3="GTM">Guatemala</option>
+        <option data-iso2="GN" data-code="224" data-country-id="95" name="Guinea" data-iso3="GIN">Guinea</option>
+        <option data-iso2="GW" data-code="245" data-country-id="96" name="Guinea-Bissau" data-iso3="GNB">Guinea-Bissau
+        </option>
+        <option data-iso2="GY" data-code="592" data-country-id="97" name="Guyana" data-iso3="GUY">Guyana</option>
+        <option data-iso2="HT" data-code="509" data-country-id="98" name="Haiti" data-iso3="HTI">Haiti</option>
+        <option data-iso2="HN" data-code="504" data-country-id="99" name="Honduras" data-iso3="HND">Honduras</option>
+        <option data-iso2="HK" data-code="852" data-country-id="100" name="Hong Kong" data-iso3="HKG">Hong Kong</option>
+        <option data-iso2="HU" data-code="36" data-country-id="101" name="Hungary" data-iso3="HUN">Hungary</option>
+        <option data-iso2="IS" data-code="354" data-country-id="102" name="Iceland" data-iso3="ISL">Iceland</option>
+        <option data-iso2="IN" data-code="91" data-country-id="103" name="India" data-iso3="IND">India</option>
+        <option data-iso2="ID" data-code="62" data-country-id="104" name="Indonesia" data-iso3="IDN">Indonesia</option>
+        <option data-iso2="IR" data-code="98" data-country-id="105" name="Iran" data-iso3="IRN">Iran</option>
+        <option data-iso2="IQ" data-code="964" data-country-id="106" name="Iraq" data-iso3="IRQ">Iraq</option>
+        <option data-iso2="IE" data-code="353" data-country-id="107" name="Ireland" data-iso3="IRL">Ireland</option>
+        <option data-iso2="IL" data-code="972" data-country-id="108" name="Israel" data-iso3="ISR">Israel</option>
+        <option data-iso2="IT" data-code="39" data-country-id="109" name="Italy" data-iso3="ITA">Italy</option>
+        <option data-iso2="CI" data-code="225" data-country-id="110" name="Ivory Coast" data-iso3="CIV">Ivory Coast</option>
+        <option data-iso2="JM" data-code="1" data-country-id="111" name="Jamaica" data-iso3="JAM">Jamaica</option>
+        <option data-iso2="JP" data-code="81" data-country-id="112" name="Japan" data-iso3="JPN">Japan</option>
+        <option data-iso2="JO" data-code="962" data-country-id="114" name="Jordan" data-iso3="JOR">Jordan</option>
+        <option data-iso2="KZ" data-code="7" data-country-id="115" name="Kazakhstan" data-iso3="KAZ">Kazakhstan</option>
+        <option data-iso2="KE" data-code="254" data-country-id="116" name="Kenya" data-iso3="KEN">Kenya</option>
+        <option data-iso2="KI" data-code="686" data-country-id="117" name="Kiribati" data-iso3="KIR">Kiribati</option>
+        <option data-iso2="KW" data-code="965" data-country-id="118" name="Kuwait" data-iso3="KWT">Kuwait</option>
+        <option data-iso2="KG" data-code="996" data-country-id="119" name="Kyrgyzstan" data-iso3="KGZ">Kyrgyzstan</option>
+        <option data-iso2="LA" data-code="856" data-country-id="120" name="Laos" data-iso3="LAO">Laos</option>
+        <option data-iso2="LV" data-code="371" data-country-id="121" name="Latvia" data-iso3="LVA">Latvia</option>
+        <option data-iso2="LB" data-code="961" data-country-id="122" name="Lebanon" data-iso3="LBN">Lebanon</option>
+        <option data-iso2="LS" data-code="266" data-country-id="123" name="Lesotho" data-iso3="LSO">Lesotho</option>
+        <option data-iso2="LR" data-code="231" data-country-id="124" name="Liberia" data-iso3="LBR">Liberia</option>
+        <option data-iso2="LY" data-code="218" data-country-id="125" name="Libya" data-iso3="LBY">Libya</option>
+        <option data-iso2="LI" data-code="423" data-country-id="126" name="Liechtenstein" data-iso3="LIE">Liechtenstein
+        </option>
+        <option data-iso2="LT" data-code="370" data-country-id="127" name="Lithuania" data-iso3="LTU">Lithuania</option>
+        <option data-iso2="LU" data-code="352" data-country-id="128" name="Luxembourg" data-iso3="LUX">Luxembourg</option>
+        <option data-iso2="MO" data-code="853" data-country-id="129" name="Macao" data-iso3="MAC">Macao</option>
+        <option data-iso2="MK" data-code="389" data-country-id="130" name="Macedonia" data-iso3="MKD">Macedonia</option>
+        <option data-iso2="MG" data-code="261" data-country-id="131" name="Madagascar" data-iso3="MDG">Madagascar</option>
+        <option data-iso2="MW" data-code="265" data-country-id="132" name="Malawi" data-iso3="MWI">Malawi</option>
+        <option data-iso2="MY" data-code="60" data-country-id="133" name="Malaysia" data-iso3="MYS">Malaysia</option>
+        <option data-iso2="MV" data-code="960" data-country-id="134" name="Maldives" data-iso3="MDV">Maldives</option>
+        <option data-iso2="ML" data-code="223" data-country-id="135" name="Mali" data-iso3="MLI">Mali</option>
+        <option data-iso2="MT" data-code="356" data-country-id="136" name="Malta" data-iso3="MLT">Malta</option>
+        <option data-iso2="MH" data-code="692" data-country-id="138" name="Marshall Islands" data-iso3="MHL">Marshall
+            Islands
+        </option>
+        <option data-iso2="MQ" data-code="596" data-country-id="139" name="Martinique" data-iso3="MTQ">Martinique</option>
+        <option data-iso2="MR" data-code="222" data-country-id="140" name="Mauritania" data-iso3="MRT">Mauritania</option>
+        <option data-iso2="MU" data-code="230" data-country-id="141" name="Mauritius" data-iso3="MUS">Mauritius</option>
+        <option data-iso2="YT" data-code="262" data-country-id="142" name="Mayotte" data-iso3="MYT">Mayotte</option>
+        <option data-iso2="MX" data-code="52" data-country-id="143" name="Mexico" data-iso3="MEX">Mexico</option>
+        <option data-iso2="FM" data-code="691" data-country-id="144" name="Micronesia, Federated States" data-iso3="FSM">
+            Micronesia,
+            Federated States
+        </option>
+        <option data-iso2="MD" data-code="373" data-country-id="147" name="Moldova" data-iso3="MDA">Moldova</option>
+        <option data-iso2="MC" data-code="377" data-country-id="148" name="Monaco" data-iso3="MCO">Monaco</option>
+        <option data-iso2="MN" data-code="976" data-country-id="149" name="Mongolia" data-iso3="MNG">Mongolia</option>
+        <option data-iso2="ME" data-code="382" data-country-id="240" name="Montenegro" data-iso3="MNE">Montenegro</option>
+        <option data-iso2="MS" data-code="1" data-country-id="150" name="Montserrat" data-iso3="MSR">Montserrat</option>
+        <option data-iso2="MA" data-code="212" data-country-id="151" name="Morocco" data-iso3="MAR">Morocco</option>
+        <option data-iso2="MZ" data-code="258" data-country-id="152" name="Mozambique" data-iso3="MOZ">Mozambique</option>
+        <option data-iso2="MM" data-code="95" data-country-id="153" name="Myanmar" data-iso3="MMR">Myanmar</option>
+        <option data-iso2="NA" data-code="264" data-country-id="154" name="Namibia" data-iso3="NAM">Namibia</option>
+        <option data-iso2="NR" data-code="674" data-country-id="155" name="Nauru" data-iso3="NRU">Nauru</option>
+        <option data-iso2="NP" data-code="977" data-country-id="156" name="Nepal" data-iso3="NPL">Nepal</option>
+        <option data-iso2="NL" data-code="31" data-country-id="157" name="Netherlands" data-iso3="NLD">Netherlands</option>
+        <option data-iso2="AN" data-code="599" data-country-id="145" name="Netherlands Antilles" data-iso3="ANT">Netherlands
+            Antilles
+        </option>
+        <option data-iso2="NC" data-code="687" data-country-id="159" name="New Caledonia" data-iso3="NCL">New Caledonia
+        </option>
+        <option data-iso2="NZ" data-code="64" data-country-id="160" name="New Zealand" data-iso3="NZL">New Zealand</option>
+        <option data-iso2="NI" data-code="505" data-country-id="161" name="Nicaragua" data-iso3="NIC">Nicaragua</option>
+        <option data-iso2="NE" data-code="227" data-country-id="162" name="Niger" data-iso3="NER">Niger</option>
+        <option data-iso2="NG" data-code="234" data-country-id="163" name="Nigeria" data-iso3="NGA">Nigeria</option>
+        <option data-iso2="NU" data-code="683" data-country-id="164" name="Niue" data-iso3="NIU">Niue</option>
+        <option data-iso2="NF" data-code="672" data-country-id="249" name="Norfolk Island" data-iso3="NFK">Norfolk Island
+        </option>
+        <option data-iso2="KP" data-code="850" data-country-id="166" name="North Korea" data-iso3="PRK">North Korea</option>
+        <option data-iso2="MP" data-code="1" data-country-id="146" name="Northern Mariana Islands" data-iso3="MNP">Northern
+            Mariana
+            Islands
+        </option>
+        <option data-iso2="NO" data-code="47" data-country-id="167" name="Norway" data-iso3="NOR">Norway</option>
+        <option data-iso2="OM" data-code="968" data-country-id="168" name="Oman" data-iso3="OMN">Oman</option>
+        <option data-iso2="PK" data-code="92" data-country-id="169" name="Pakistan" data-iso3="PAK">Pakistan</option>
+        <option data-iso2="PW" data-code="680" data-country-id="170" name="Palau" data-iso3="PLW">Palau</option>
+        <option data-iso2="PS" data-code="970" data-country-id="232" name="Palestinian Territory" data-iso3="PSE">
+            Palestinian
+            Territory
+        </option>
+        <option data-iso2="PA" data-code="507" data-country-id="171" name="Panama" data-iso3="PAN">Panama</option>
+        <option data-iso2="PG" data-code="675" data-country-id="172" name="Papua New Guinea" data-iso3="PNG">Papua New
+            Guinea
+        </option>
+        <option data-iso2="PY" data-code="595" data-country-id="173" name="Paraguay" data-iso3="PRY">Paraguay</option>
+        <option data-iso2="PE" data-code="51" data-country-id="174" name="Peru" data-iso3="PER">Peru</option>
+        <option data-iso2="PH" data-code="63" data-country-id="175" name="Philippines" data-iso3="PHL">Philippines</option>
+        <option data-iso2="PL" data-code="48" data-country-id="176" name="Poland" data-iso3="POL">Poland</option>
+        <option data-iso2="PT" data-code="351" data-country-id="177" name="Portugal" data-iso3="PRT">Portugal</option>
+        <option data-iso2="PR" data-code="1" data-country-id="179" name="Puerto Rico" data-iso3="PRI">Puerto Rico</option>
+        <option data-iso2="QA" data-code="974" data-country-id="180" name="Qatar" data-iso3="QAT">Qatar</option>
+        <option data-iso2="RE" data-code="262" data-country-id="181" name="Reunion" data-iso3="REU">Reunion</option>
+        <option data-iso2="RO" data-code="40" data-country-id="182" name="Romania" data-iso3="ROU">Romania</option>
+        <option data-iso2="RU" data-code="7" data-country-id="2" name="Russia" data-iso3="RUS">Russia</option>
+        <option data-iso2="RW" data-code="250" data-country-id="183" name="Rwanda" data-iso3="RWA">Rwanda</option>
+        <option data-iso2="BL" data-code="590" data-country-id="251" name="Saint Barthelemy" data-iso3="BLM">Saint
+            Barthelemy
+        </option>
+        <option data-iso2="SH" data-code="290" data-country-id="197" name="Saint Helena" data-iso3="SHN">Saint Helena
+        </option>
+        <option data-iso2="KN" data-code="1" data-country-id="158" name="Saint Kitts and Nevis" data-iso3="KNA">Saint Kitts
+            and
+            Nevis
+        </option>
+        <option data-iso2="LC" data-code="1" data-country-id="199" name="Saint Lucia" data-iso3="LCA">Saint Lucia</option>
+        <option data-iso2="MF" data-code="590" data-country-id="252" name="Saint Martin (French part)" data-iso3="MAF">Saint
+            Martin
+            (French part)
+        </option>
+        <option data-iso2="PM" data-code="508" data-country-id="200" name="Saint Pierre and Miquelon" data-iso3="SPM">Saint
+            Pierre and
+            Miquelon
+        </option>
+        <option data-iso2="VC" data-code="1" data-country-id="201" name="Saint Vincent and the Grenadines" data-iso3="VCT">
+            Saint
+            Vincent and the Grenadines
+        </option>
+        <option data-iso2="WS" data-code="685" data-country-id="44" name="Samoa" data-iso3="WSM">Samoa</option>
+        <option data-iso2="SM" data-code="378" data-country-id="185" name="San Marino" data-iso3="SMR">San Marino</option>
+        <option data-iso2="ST" data-code="239" data-country-id="178" name="Sao Tome and Principe" data-iso3="STP">Sao Tome
+            and
+            Principe
+        </option>
+        <option data-iso2="SA" data-code="966" data-country-id="187" name="Saudi Arabia" data-iso3="SAU">Saudi Arabia
+        </option>
+        <option data-iso2="SN" data-code="221" data-country-id="94" name="Senegal" data-iso3="SEN">Senegal</option>
+        <option data-iso2="RS" data-code="381" data-country-id="76" name="Serbia" data-iso3="SRB">Serbia</option>
+        <option data-iso2="SC" data-code="248" data-country-id="186" name="Seychelles" data-iso3="SYC">Seychelles</option>
+        <option data-iso2="SL" data-code="232" data-country-id="198" name="Sierra Leone" data-iso3="SLE">Sierra Leone
+        </option>
+        <option data-iso2="SG" data-code="65" data-country-id="188" name="Singapore" data-iso3="SGP">Singapore</option>
+        <option data-iso2="SX" data-code="1" data-country-id="268" name="Sint Maarten" data-iso3="SXM">Sint Maarten</option>
+        <option data-iso2="SK" data-code="421" data-country-id="189" name="Slovakia" data-iso3="SVK">Slovakia</option>
+        <option data-iso2="SI" data-code="386" data-country-id="190" name="Slovenia" data-iso3="SVN">Slovenia</option>
+        <option data-iso2="SB" data-code="677" data-country-id="191" name="Solomon Islands" data-iso3="SLB">Solomon
+            Islands
+        </option>
+        <option data-iso2="SO" data-code="252" data-country-id="192" name="Somalia" data-iso3="SOM">Somalia</option>
+        <option data-iso2="ZA" data-code="27" data-country-id="193" name="South Africa" data-iso3="ZAF">South Africa
+        </option>
+        <option data-iso2="KR" data-code="82" data-country-id="194" name="South Korea" data-iso3="KOR">South Korea</option>
+        <option data-iso2="SS" data-code="211" data-country-id="267" name="South Sudan" data-iso3="SSD">South Sudan</option>
+        <option data-iso2="ES" data-code="34" data-country-id="195" name="Spain" data-iso3="ESP">Spain</option>
+        <option data-iso2="LK" data-code="94" data-country-id="196" name="Sri Lanka" data-iso3="LKA">Sri Lanka</option>
+        <option data-iso2="SD" data-code="249" data-country-id="202" name="Sudan" data-iso3="SDN">Sudan</option>
+        <option data-iso2="SR" data-code="597" data-country-id="203" name="Suriname" data-iso3="SUR">Suriname</option>
+        <option data-iso2="SZ" data-code="268" data-country-id="204" name="Swaziland" data-iso3="SWZ">Swaziland</option>
+        <option data-iso2="SE" data-code="46" data-country-id="205" name="Sweden" data-iso3="SWE">Sweden</option>
+        <option data-iso2="CH" data-code="41" data-country-id="206" name="Switzerland" data-iso3="CHE">Switzerland</option>
+        <option data-iso2="SY" data-code="963" data-country-id="207" name="Syria" data-iso3="SYR">Syria</option>
+        <option data-iso2="TW" data-code="886" data-country-id="208" name="Taiwan" data-iso3="TWN">Taiwan</option>
+        <option data-iso2="TJ" data-code="992" data-country-id="209" name="Tajikistan" data-iso3="TJK">Tajikistan</option>
+        <option data-iso2="TZ" data-code="255" data-country-id="210" name="Tanzania, United Republic" data-iso3="TZA">
+            Tanzania, United
+            Republic
+        </option>
+        <option data-iso2="TH" data-code="66" data-country-id="211" name="Thailand" data-iso3="THA">Thailand</option>
+        <option data-iso2="TL" data-code="670" data-country-id="137" name="Timor-Leste" data-iso3="TLS">Timor-Leste</option>
+        <option data-iso2="TG" data-code="228" data-country-id="212" name="Togo" data-iso3="TGO">Togo</option>
+        <option data-iso2="TK" data-code="690" data-country-id="213" name="Tokelau" data-iso3="TKL">Tokelau</option>
+        <option data-iso2="TO" data-code="676" data-country-id="214" name="Tonga" data-iso3="TON">Tonga</option>
+        <option data-iso2="TT" data-code="1" data-country-id="215" name="Trinidad and Tobago" data-iso3="TTO">Trinidad and
+            Tobago
+        </option>
+        <option data-iso2="TN" data-code="216" data-country-id="216" name="Tunisia" data-iso3="TUN">Tunisia</option>
+        <option data-iso2="TR" data-code="90" data-country-id="217" name="Turkey" data-iso3="TUR">Turkey</option>
+        <option data-iso2="TM" data-code="993" data-country-id="218" name="Turkmenistan" data-iso3="TKM">Turkmenistan
+        </option>
+        <option data-iso2="TC" data-code="1" data-country-id="219" name="Turks and Caicos Islands" data-iso3="TCA">Turks and
+            Caicos
+            Islands
+        </option>
+        <option data-iso2="TV" data-code="688" data-country-id="220" name="Tuvalu" data-iso3="TUV">Tuvalu</option>
+        <option data-iso2="UG" data-code="256" data-country-id="221" name="Uganda" data-iso3="UGA">Uganda</option>
+        <option data-iso2="UA" data-code="380" data-country-id="222" name="Ukraine" data-iso3="UKR">Ukraine</option>
+        <option data-iso2="AE" data-code="971" data-country-id="223" name="United Arab Emirates" data-iso3="ARE">United Arab
+            Emirates
+        </option>
+        <option data-iso2="GB" data-code="44" data-country-id="224" name="United Kingdom" data-iso3="GBR">United Kingdom
+        </option>
+        <option data-iso2="US" data-code="1" data-country-id="1" name="United States" data-iso3="USA">United States</option>
+        <option data-iso2="UY" data-code="598" data-country-id="225" name="Uruguay" data-iso3="URY">Uruguay</option>
+        <option data-iso2="UZ" data-code="998" data-country-id="227" name="Uzbekistan" data-iso3="UZB">Uzbekistan</option>
+        <option data-iso2="VU" data-code="678" data-country-id="228" name="Vanuatu" data-iso3="VUT">Vanuatu</option>
+        <option data-iso2="VA" data-code="379" data-country-id="229" name="Vatican City" data-iso3="VAT">Vatican City
+        </option>
+        <option data-iso2="VE" data-code="58" data-country-id="230" name="Venezuela" data-iso3="VEN">Venezuela</option>
+        <option data-iso2="VN" data-code="84" data-country-id="231" name="Vietnam" data-iso3="VNM">Vietnam</option>
+        <option data-iso2="VG" data-code="1" data-country-id="32" name="Virgin Islands, British" data-iso3="VGB">Virgin
+            Islands,
+            British
+        </option>
+        <option data-iso2="VI" data-code="1" data-country-id="226" name="Virgin Islands, U.S." data-iso3="VIR">Virgin
+            Islands, U.S.
+        </option>
+        <option data-iso2="WF" data-code="681" data-country-id="233" name="Wallis and Futuna" data-iso3="WLF">Wallis and
+            Futuna
+        </option>
+        <option data-iso2="YE" data-code="967" data-country-id="63" value="2" data-iso3="YEM">Yemen</option>
+        <option data-iso2="ZM" data-code="260" data-country-id="59" name="Zambia" data-iso3="ZMB">Zambia</option>
+        <option data-iso2="ZW" data-code="263" data-country-id="92" name="Zimbabwe" data-iso3="ZWE">Zimbabwe</option>
+    </select>
+
+    <button type="button" id="get_rates">Get rates</button>
+
+    <script type="text/javascript">
+        function getRates() {
+            var country = document.getElementById('countrySelect');
+            var countryId = country.selectedOptions[0].getAttribute('data-country-id');
+
+            console.log(countryId);
+
+            console.log(country.value);
+
+            var entry_point = 'https://www.ringcentral.com/api/index.php';
+            var cmd = 'getCountries';
+            var typeResponse = 'json';
+            var params = 'cmd='+cmd+'&typeResponse'+typeResponse;
+
+
+            var http = new XMLHttpRequest();
+            http.open('POST', entry_point, true);
+
+            http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            http.onreadystatechange = function() {//Call a function when the state changes.
+                if(http.readyState === 4 && http.status === 200) {
+                }
+            };
+            http.send(params);
+            http.onload = function () {
+                console.log(this.responseText);
+            };
+        }
+
+        var actionButton = document.getElementById('get_rates');
+        actionButton.addEventListener('click', getRates);
+    </script>
+
+
+</div>
+
+{% endblock %}

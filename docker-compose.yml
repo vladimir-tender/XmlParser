@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+    nginx:
+        build: nginx
+        restart: always
+        links:
+            - php
+        ports:
+            - "80:80"
+        volumes:
+            - "./:/code"
+
+    php:
+        image: mysterybrand/php-fpm
+        restart: always
+        user: '${RUN_CONTAINER_WITH_USER}'
+        working_dir: '/code'
+        volumes:
+            - "./:/code"

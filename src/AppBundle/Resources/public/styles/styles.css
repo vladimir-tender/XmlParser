@@ -1,0 +1,7 @@
+a:hover, a:visited:hover{
+    color: rgba(36, 134, 163, 0.83);
+}
+a, a:visited{
+    color: rgba(23, 79, 97, 0.83);
+    text-decoration: none;
+}

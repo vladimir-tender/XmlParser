@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rss parser</title>
+
+    <link rel="stylesheet" href="{{ asset('') }}">
+
+    {% block css %}{% endblock %}
+
+    {% block js_head %}{% endblock %}
+</head>
+
+<body>
+<a href="{{ path('app_homepage') }}">>RSS</a><br><a href="{{ path('rates') }}">>Rates</a><br><br>
+
+{% block body %}
+{% endblock %}
+
+</body>
+{% block js_footer %}{% endblock %}
+</html>
